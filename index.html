@@ -29,7 +29,7 @@
 
   <!-- UTMify Pixel -->
   <script>
-    window.pixelId = "6a0e5c0bd7bcfee27ced108d";
+    window.pixelId = "6a172053f70943021a30eaae";
     var a = document.createElement("script");
     a.setAttribute("async", "");
     a.setAttribute("defer", "");
@@ -124,7 +124,7 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding-bottom: 0;
+      padding-bottom: 40px;
       background: linear-gradient(180deg, #000 0%, hsl(140, 50%, 8%) 50%, #000 100%)
     }
 
@@ -636,6 +636,96 @@
       font-size: .7rem;
       color: #00A13C;
       font-weight: 700
+    }
+
+    .cat-card-sensitive img {
+      filter: blur(22px);
+      transform: scale(1.08);
+      transition: filter .35s ease, transform .35s ease
+    }
+
+    .cat-card-sensitive.revealed img {
+      filter: blur(0);
+      transform: scale(1)
+    }
+
+    .cat-card-blur {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px;
+      background: rgba(0, 0, 0, .55);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      text-align: center;
+      cursor: pointer;
+      transition: opacity .3s ease;
+      z-index: 2
+    }
+
+    .cat-card-sensitive.revealed .cat-card-blur {
+      opacity: 0;
+      pointer-events: none
+    }
+
+    .cat-card-blur .eye-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .12);
+      border: 1.5px solid rgba(255, 255, 255, .85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      line-height: 1
+    }
+
+    .cat-card-blur .warn {
+      font-weight: 800;
+      font-size: .8rem;
+      color: #fff;
+      letter-spacing: .02em
+    }
+
+    .cat-card-blur .hint {
+      font-size: .68rem;
+      color: rgba(255, 255, 255, .8);
+      font-weight: 600
+    }
+
+    .cat-card-sensitive .cat-card-label {
+      z-index: 3
+    }
+
+    .cat-card-sensitive .cat-card-label .name {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .95rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, .85)
+    }
+
+    .badge-18 {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: hsl(0, 84%, 55%);
+      color: #fff;
+      font-weight: 900;
+      font-size: .7rem;
+      padding: 2px 7px;
+      border-radius: 6px;
+      border: 1.5px solid #fff;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, .4);
+      letter-spacing: .02em
     }
 
     /* BONUS */
@@ -1590,20 +1680,7 @@
         </div>
       </div>
     </div>
-    <div style="position:relative;margin-top:-16px">
-      <div class="hero-price-bar" style="padding-top:40px">
-        <p class="price-old">de $39 USD</p>
-        <p class="label">POR SOLO</p>
-        <p class="price-new">$3.99 USD</p>
-        <p class="small-text">ACCESO INMEDIATO + GARANTIA DE 7 DIAS</p>
-      </div>
-    </div>
   </section>
-
-  <!-- CTA -->
-  <div style="background:#fff;padding:0 16px 32px">
-    <a href="#offer" class="cta-btn">QUIERO LOS 300+ PROMPTS AHORA</a>
-  </div>
 
   <!-- DOR -->
   <section style="background:#000;padding:32px 0 40px">
@@ -1938,7 +2015,7 @@
         </div>
         <div class="reveal from-up" data-delay="200">
           <div class="cat-card-img"><img decoding="async"
-              src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_35b4ob249Eu1CbpAhP9eluMVYxE%2Fhf_20260219_222251_d6b116f3-9339-4f2c-9da4-13678993a7ec.png&w=1920&q=85"
+            src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_35b4ob249Eu1CbpAhP9eluMVYxE%2Fhf_20260219_222251_d6b116f3-9339-4f2c-9da4-13678993a7ec.png&w=1920&q=85"
               alt="Con Producto Real" />
             <div class="cat-card-label">
               <p class="name">Con Producto Real</p>
@@ -1964,11 +2041,16 @@
           </div>
         </div>
         <div class="reveal from-up" data-delay="350">
-          <div class="cat-card-img"><img decoding="async"
-              src="https://cdn.geraew.com.br/storage/v1/object/public/ai-generations/generations/cmnpgnivv000hyda0y4uz62nq/5be61f71-40fb-40b1-9db5-2dcc530828ef/output_0.png"
+          <div class="cat-card-img cat-card-sensitive" onclick="this.classList.toggle('revealed')"><img decoding="async"
+              src="assets/a5134a1b-16d3-416c-bab2-d9d9ce37f05c.jpeg"
               alt="Nicho Hot" />
+            <div class="cat-card-blur" aria-label="Mostrar contenido sensible">
+              <div class="eye-btn" aria-hidden="true">&#128065;</div>
+              <p class="warn">Contenido sensible</p>
+              <p class="hint">Toca el ojo para ver</p>
+            </div>
             <div class="cat-card-label">
-              <p class="name">Nicho Hot</p>
+              <p class="name">Nicho Hot <span class="badge-18">+18</span></p>
               <p class="count">120+ prompts</p>
             </div>
           </div>
@@ -2143,7 +2225,7 @@
           </a>
 
           <!-- PLAN COMPLETO -->
-          <a href="https://pay.hotmart.com/E105912753W?off=kjhcf3pi&checkoutMode=10&bid=1779327745978" class="offer-card featured"
+          <a href="https://pay.hotmart.com/E105912753W?off=lytny95c&checkoutMode=10" class="offer-card featured"
             style="text-decoration:none">
             <div class="offer-badge">⭐ EL MÁS ELEGIDO</div>
             <img class="offer-banner"
@@ -2214,7 +2296,7 @@
             <div class="offer-cta">
               <p style="color:hsl(0,84%,60%);text-decoration:line-through;font-weight:700;margin-bottom:4px">de $39 USD
               </p>
-              <p class="offer-price">$6.99 USD</p>
+              <p class="offer-price">$9.99 USD</p>
               <p style="color:#999;font-size:.8rem;margin-bottom:16px">pago único — menos que un café</p>
               <span class="cta-btn" style="max-width:100%">QUIERO EL PACK COMPLETO</span>
               <p style="color:#666;font-size:.7rem;margin-top:12px">Acceso inmediato tras la confirmación del pago</p>
@@ -2295,7 +2377,7 @@
   <!-- CTA FINAL -->
   <section style="background:#000;padding:0 0 48px">
     <div class="container text-center">
-      <a href="#offer" class="cta-btn">QUIERO LOS 300+ PROMPTS POR $6.99 USD</a>
+      <a href="#offer" class="cta-btn">QUIERO LOS 300+ PROMPTS POR $9.99 USD</a>
       <p style="color:#666;font-size:.7rem;margin-top:12px">Acceso inmediato. Garantía de 7 días. Pago seguro.</p>
     </div>
   </section>
