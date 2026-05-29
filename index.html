@@ -1321,6 +1321,67 @@
       right: 10px
     }
 
+    /* REVEAL SLIDE (toca para quitar la ropa) */
+    .hero-reveal-slide {
+      position: relative;
+      width: 100%;
+      flex-shrink: 0;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 16px;
+      filter: drop-shadow(0 25px 50px rgba(0, 161, 60, .3))
+    }
+
+    .hero-reveal-slide img {
+      width: 100%;
+      display: block;
+      filter: none;
+      transition: opacity .5s ease
+    }
+
+    .hero-reveal-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 32px;
+      pointer-events: none;
+      transition: opacity .4s ease
+    }
+
+    .hero-reveal-badge {
+      background: rgba(0, 0, 0, .75);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      font-size: .9375rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .4);
+      animation: revealPulse 1.8s ease-in-out infinite
+    }
+
+    @keyframes revealPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1
+      }
+
+      50% {
+        transform: scale(1.05);
+        opacity: .85
+      }
+    }
+
+    .hero-reveal-slide.revealed .hero-reveal-overlay {
+      opacity: 0
+    }
+
     /* FOOTER */
     .footer {
       background: hsl(0, 0%, 5%);
@@ -1668,6 +1729,12 @@
           <button class="hero-arrow prev" onclick="heroGoTo(window._heroIdx-1)">&#8249;</button>
           <button class="hero-arrow next" onclick="heroGoTo(window._heroIdx+1)">&#8250;</button>
           <div class="hero-carousel-track" id="heroTrack">
+            <div class="hero-reveal-slide" id="heroRevealSlide" role="button" tabindex="0" aria-label="Toca para quitar la ropa">
+              <img id="heroRevealImg" decoding="async" src="assets/imagem_mudar_1.jpg" alt="Influencer de IA reveal" />
+              <div class="hero-reveal-overlay">
+                <div class="hero-reveal-badge"><span class="apple-emoji">👆</span> Toca para quitar la ropa</div>
+              </div>
+            </div>
             <img decoding="async" src="assets/hero-carousel-1.webp" alt="Influencer de IA 1" />
             <img decoding="async" src="assets/hero-carousel-2.webp" alt="Influencer de IA 2" />
             <img decoding="async" src="assets/hero-carousel-3.webp" alt="Influencer de IA 3" />
@@ -1676,6 +1743,7 @@
             <button class="hero-dot active" onclick="heroGoTo(0)"></button>
             <button class="hero-dot" onclick="heroGoTo(1)"></button>
             <button class="hero-dot" onclick="heroGoTo(2)"></button>
+            <button class="hero-dot" onclick="heroGoTo(3)"></button>
           </div>
         </div>
       </div>
@@ -1896,7 +1964,7 @@
         <div class="reveal from-left"><img decoding="async"
             src="https://replicate.delivery/xezq/tncR0QJv8TpvLFLA2CQqCZCvEb8ITsQ7SEYySnkmf6QDeOaWA/tmp1qacutzy.jpg"
             alt="Prompt genérico" style="aspect-ratio:3/4;object-fit:cover" /></div>
-        <div class="reveal from-right"><img decoding="async" src="assets/before-after-nosso.webp" alt="Nuestro prompt"
+        <div class="reveal from-right"><img decoding="async" src="assets/before-after-nosso-new.jpg" alt="Nuestro prompt"
             style="aspect-ratio:3/4;object-fit:cover" /></div>
         <div class="reveal from-up" data-delay="200">
           <h3 class="red">Prompt Genérico</h3>
@@ -1975,74 +2043,46 @@
       <div class="cat-grid cat-grid-img" style="margin-top:32px">
         <div class="reveal from-up" data-delay="0">
           <div class="cat-card-img"><img decoding="async"
-              src="https://cdn.geraew.com.br/storage/v1/object/public/ai-generations/admin_assets/landing/7571413e-5521-42a9-9ae0-4d807be20987/1bf289df39ddad3067c207b2799f675c.jpg"
+              src="newimages/thumb-0.webp"
               alt="Fotos de Perfil" />
-            <div class="cat-card-label">
-              <p class="name">Fotos de Perfil</p>
-              <p class="count">40+ prompts</p>
-            </div>
           </div>
         </div>
         <div class="reveal from-up" data-delay="50">
           <div class="cat-card-img"><img decoding="async"
-              src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_35b4ob249Eu1CbpAhP9eluMVYxE%2Fhf_20260222_233603_78843b36-bfed-4865-a81c-eadd034c877e.png&w=1920&q=85"
+              src="newimages/thumb-1.webp"
               alt="Videos UGC" />
-            <div class="cat-card-label">
-              <p class="name">Videos UGC</p>
-              <p class="count">50+ prompts</p>
-            </div>
           </div>
         </div>
         <div class="reveal from-up" data-delay="100">
           <div class="cat-card-img"><img decoding="async"
-              src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_35b4ob249Eu1CbpAhP9eluMVYxE%2Fhf_20260219_231000_2357a143-08ba-40fe-bcb8-0b056ecdfc4e.png&w=1920&q=85"
+              src="newimages/thumb-3.webp"
               alt="Looks y Ropa" />
-            <div class="cat-card-label">
-              <p class="name">Looks & Ropa</p>
-              <p class="count">35+ prompts</p>
-            </div>
           </div>
         </div>
         <div class="reveal from-up" data-delay="150">
           <div class="cat-card-img"><img decoding="async"
-              src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_35b4ob249Eu1CbpAhP9eluMVYxE%2Fhf_20260227_012831_db30caa5-8b7d-477b-8a23-b74aeda8d904.jpeg&w=1920&q=85"
+              src="newimages/thumb-6.webp"
               alt="Escenarios y Lugares" />
-            <div class="cat-card-label">
-              <p class="name">Escenarios & Lugares</p>
-              <p class="count">40+ prompts</p>
-            </div>
           </div>
         </div>
         <div class="reveal from-up" data-delay="200">
           <div class="cat-card-img"><img decoding="async"
-            src="https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_35b4ob249Eu1CbpAhP9eluMVYxE%2Fhf_20260219_222251_d6b116f3-9339-4f2c-9da4-13678993a7ec.png&w=1920&q=85"
+            src="newimages/output_0.png"
               alt="Con Producto Real" />
-            <div class="cat-card-label">
-              <p class="name">Con Producto Real</p>
-              <p class="count">45+ prompts</p>
-            </div>
           </div>
         </div>
         <div class="reveal from-up" data-delay="250">
-          <div class="cat-card-img"><img decoding="async" src="assets/categoria-fitness.webp" alt="Fitness y Salud" />
-            <div class="cat-card-label">
-              <p class="name">Fitness & Salud</p>
-              <p class="count">25+ prompts</p>
-            </div>
+          <div class="cat-card-img"><img decoding="async" src="newimages/thumb-5.webp" alt="Fitness y Salud" />
           </div>
         </div>
         <div class="reveal from-up" data-delay="300">
-          <div class="cat-card-img"><img decoding="async" src="assets/categoria-expressoes.webp"
+          <div class="cat-card-img"><img decoding="async" src="newimages/thumb-7.webp"
               alt="Expresiones Faciales" />
-            <div class="cat-card-label">
-              <p class="name">Expresiones Faciales</p>
-              <p class="count">30+ prompts</p>
-            </div>
           </div>
         </div>
         <div class="reveal from-up" data-delay="350">
           <div class="cat-card-img cat-card-sensitive" onclick="this.classList.toggle('revealed')"><img decoding="async"
-              src="assets/a5134a1b-16d3-416c-bab2-d9d9ce37f05c.jpeg"
+              src="newimages/msdianaxs-1.jpg"
               alt="Nicho Hot" />
             <div class="cat-card-blur" aria-label="Mostrar contenido sensible">
               <div class="eye-btn" aria-hidden="true">&#128065;</div>
@@ -2050,8 +2090,7 @@
               <p class="hint">Toca el ojo para ver</p>
             </div>
             <div class="cat-card-label">
-              <p class="name">Nicho Hot <span class="badge-18">+18</span></p>
-              <p class="count">120+ prompts</p>
+              <p class="name"><span class="badge-18">+18</span></p>
             </div>
           </div>
         </div>
@@ -2419,6 +2458,20 @@
       }
       window.heroGoTo = heroGoTo;
 
+      // Tap to reveal (first slide)
+      const revealSlide = document.getElementById('heroRevealSlide');
+      const revealImg = document.getElementById('heroRevealImg');
+      let revealed = false;
+      function toggleReveal() {
+        revealed = !revealed;
+        revealImg.src = revealed ? 'assets/imagem_mudar_2.jpg' : 'assets/imagem_mudar_1.jpg';
+        revealSlide.classList.toggle('revealed', revealed);
+      }
+      if (revealSlide) {
+        revealSlide.addEventListener('click', (e) => { e.stopPropagation(); toggleReveal(); });
+        revealSlide.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleReveal(); } });
+      }
+
       // Touch swipe
       track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; dragging = true }, { passive: true });
       track.addEventListener('touchmove', e => { if (dragging) moveX = e.touches[0].clientX - startX }, { passive: true });
@@ -2431,8 +2484,6 @@
       track.addEventListener('mouseleave', () => { dragging = false; track.style.cursor = 'grab' });
       track.style.cursor = 'grab';
 
-      // Auto slide
-      setInterval(() => heroGoTo((current + 1) % total), 4000);
     })();
   </script>
 
