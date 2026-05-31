@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+  schemas   = ["public", "auth"]
+}
+
+model Profile {
+  userId       String   @id @map("user_id") @db.Uuid
+  email        String?
+  credits      Int      @default(0)
+  languageCode String?  @map("language_code")
+  banned       Boolean  @default(false)
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt    DateTime @default(now()) @map("updated_at") @db.Timestamptz(6)
+
+  user AuthUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("profiles")
+  @@schema("public")
+}
+
+model Generation {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId       String   @map("user_id") @db.Uuid
+  prompt       String
+  creditsSpent Int      @map("credits_spent")
+  outputUrl    String?  @map("output_url")
+  inputUrls    String[] @map("input_urls")
+  kind         String?
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  user AuthUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt(sort: Desc)], map: "generations_user_idx")
+  @@map("generations")
+  @@schema("public")
+}
+
+model ProcessedOrder {
+  orderId    String   @id @map("order_id")
+  userId     String?  @map("user_id") @db.Uuid
+  pkgId      String?  @map("pkg_id")
+  credits    Int
+  amount     Decimal  @db.Decimal
+  rawPayload Json     @map("raw_payload")
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  user AuthUser? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@map("processed_orders")
+  @@schema("public")
+}
+
+/// Referência somente-leitura à tabela auth.users gerenciada pelo Supabase Auth.
+model AuthUser {
+  id    String  @id @db.Uuid
+  email String? @unique
+
+  profile         Profile?
+  generations     Generation[]
+  processedOrders ProcessedOrder[]
+
+  @@map("users")
+  @@schema("auth")
+}
