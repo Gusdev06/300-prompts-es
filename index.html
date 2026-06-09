@@ -24,9 +24,6 @@
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1223791793200733&ev=PageView&noscript=1" /></noscript>
 
-  <!-- UTMify UTMs -->
-  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
-
   <!-- UTMify Pixel -->
   <script>
     window.pixelId = "6a172053f70943021a30eaae";
@@ -35,6 +32,67 @@
     a.setAttribute("defer", "");
     a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
     document.head.appendChild(a);
+  </script>
+
+  <!-- UTM Forwarder (manual fallback) -->
+  <script>
+    (function () {
+      var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'cid', 'sck', 'xcod', 'fbclid', 'gclid', 'ttclid'];
+      var STORAGE_KEY = '__utm_params__';
+
+      function getParams() {
+        var url = new URLSearchParams(window.location.search);
+        var params = {};
+        UTM_KEYS.forEach(function (k) {
+          var v = url.get(k);
+          if (v) params[k] = v;
+        });
+        return params;
+      }
+
+      function readStored() {
+        try { return JSON.parse(sessionStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) { return {}; }
+      }
+
+      function saveStored(obj) {
+        try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); } catch (e) {}
+      }
+
+      var current = getParams();
+      var stored = readStored();
+      var merged = Object.assign({}, stored, current);
+      if (Object.keys(current).length > 0) saveStored(merged);
+
+      function appendUtms(href) {
+        if (!href || href.indexOf('pay.hotmart.com') === -1) return href;
+        try {
+          var u = new URL(href);
+          Object.keys(merged).forEach(function (k) {
+            if (!u.searchParams.get(k)) u.searchParams.set(k, merged[k]);
+          });
+          return u.toString();
+        } catch (e) { return href; }
+      }
+
+      function processLinks() {
+        var links = document.querySelectorAll('a[href*="pay.hotmart.com"]');
+        links.forEach(function (a) {
+          a.href = appendUtms(a.getAttribute('href'));
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', processLinks);
+      } else {
+        processLinks();
+      }
+
+      // Click interceptor (safety net)
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href*="pay.hotmart.com"]');
+        if (a) a.href = appendUtms(a.getAttribute('href'));
+      }, true);
+    })();
   </script>
 
   <!-- Google Analytics 4 (GA4) -->
