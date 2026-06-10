@@ -61,6 +61,17 @@
       var current = getParams();
       var stored = readStored();
       var merged = Object.assign({}, stored, current);
+
+      // Build xcod from utm_* when Meta doesn't send it (UTMfy matching key)
+      if (!merged.xcod && (merged.utm_campaign || merged.utm_medium || merged.utm_content || merged.utm_term)) {
+        var SEP = 'hQwK21wXxR';
+        merged.xcod = (merged.utm_source || 'FB') + SEP +
+          (merged.utm_campaign || '') + SEP +
+          (merged.utm_medium || '') + SEP +
+          (merged.utm_content || '') + SEP +
+          (merged.utm_term || '');
+      }
+
       if (Object.keys(current).length > 0) saveStored(merged);
 
       function appendUtms(href) {
