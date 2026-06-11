@@ -1,0 +1,7 @@
+[     333ms] [LOG] Tracker Meta version 1.6.1 @ https://cdn.utmify.com.br/scripts/pixel/pixel.js:0
+[     334ms] [LOG] Tracker.inited?: false @ https://cdn.utmify.com.br/scripts/pixel/pixel.js:0
+[     501ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://promptsgustagoat.vercel.app/favicon.ico:0
+[    1095ms] [LOG] buttons [button.hero-arrow.prev, button.hero-arrow.next, button.hero-dot.active, button.hero-dot, button.hero-dot, button.hero-dot] @ https://cdn.utmify.com.br/scripts/pixel/pixel.js:0
+[    1193ms] [LOG] response for 6a172053f70943021a30eaae: 1223791793200733 @ https://cdn.utmify.com.br/scripts/pixel/pixel.js:0
+[    1194ms] [WARNING] [Meta Pixel] - Duplicate Pixel ID: 1223791793200733. @ https://connect.facebook.net/en_US/fbevents.js:183
+[    9353ms] [LOG] response for 6a172053f70943021a30eaae: 1223791793200733 @ https://cdn.utmify.com.br/scripts/pixel/pixel.js:0
