@@ -1,0 +1,28 @@
+[      87ms] [LOG] utms script loaded! 2.3.12 @ https://cdn.utmify.com.br/scripts/utms/latest.js:0
+[     124ms] [LOG] Tracker Meta version 1.6.1 @ https://cdn.utmify.com.br/scripts/pixel/pixel.js:0
+[     124ms] [LOG] Tracker.inited?: false @ https://cdn.utmify.com.br/scripts/pixel/pixel.js:0
+[     419ms] [LOG] buttons [button.hero-arrow.prev, button.hero-arrow.next, button.hero-dot.active, button.hero-dot, button.hero-dot] @ https://cdn.utmify.com.br/scripts/pixel/pixel.js:0
+[     421ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3001/tracking/v1/events:0
+[     421ms] Uncaught (in promise) TypeError: Failed to fetch
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:19984)
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:17614)
+    at l (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:17359)
+    at event (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:19908)
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:30416)
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:28993)
+    at l (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:28738)
+    at track (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:30263)
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:29852)
+    at r (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:28795)
+[    8423ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3001/tracking/v1/events:0
+[    8424ms] Uncaught (in promise) TypeError: Failed to fetch
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:19984)
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:17614)
+    at l (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:17359)
+    at event (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:19908)
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:30416)
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:28993)
+    at l (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:28738)
+    at track (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:30263)
+    at <anonymous> (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:38266)
+    at r (https://cdn.utmify.com.br/scripts/pixel/pixel.js:0:37793)
