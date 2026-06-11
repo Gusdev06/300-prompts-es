@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WAIT! One last offer for your order | gustagoat.ia</title>
+  <meta name="robots" content="noindex,nofollow" />
+
+  <!-- Meta Pixel -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      }; if (!f._fbq) f._fbq = n;
+      n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1223791793200733');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', { content_name: 'Upsell Motion Clone', content_type: 'product', value: 14.90, currency: 'USD' });
+  </script>
+
+  <!-- UTMify -->
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
+  <script>
+    window.pixelId = "6a172053f70943021a30eaae";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+      line-height: 1.5;
+    }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+    .apple-emoji { font-family: "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif }
+
+    /* ===== TOP ALERT BAR ===== */
+    .alert-bar {
+      background: linear-gradient(90deg, hsl(0,84%,55%), hsl(20,90%,55%));
+      color: #fff;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 4px 20px rgba(0,0,0,.5);
+    }
+    .alert-bar .timer {
+      display: inline-block;
+      background: rgba(0,0,0,.35);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 6px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 48px 0 32px;
+      text-align: center;
+    }
+    .hero-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,193,7,.12);
+      border: 1px solid rgba(255,193,7,.4);
+      color: hsl(45,100%,60%);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .hero-flag-dot {
+      width: 6px; height: 6px;
+      background: hsl(45,100%,60%);
+      border-radius: 50%;
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1) }
+      50% { opacity: .35; transform: scale(.85) }
+    }
+    .hero h1 {
+      font-size: clamp(1.85rem, 5vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+    .hero h1 .stop {
+      color: hsl(0,84%,60%);
+      display: block;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      margin-bottom: 6px;
+    }
+    .hero h1 .accent {
+      background: linear-gradient(90deg, hsl(45,100%,60%), hsl(35,100%,55%));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #bbb;
+      max-width: 640px;
+      margin: 0 auto 28px;
+      line-height: 1.55;
+    }
+    .hero-sub strong { color: #fff; font-weight: 700; }
+
+    /* ===== VSL / DEMO ===== */
+    .demo-box {
+      max-width: 720px;
+      margin: 0 auto 40px;
+      background: linear-gradient(135deg, hsl(0,0%,7%), hsl(0,0%,4%));
+      border: 1px solid hsl(0,0%,15%);
+      border-radius: 16px;
+      padding: 6px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    }
+    .demo-aspect {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .demo-placeholder {
+      text-align: center;
+      padding: 24px;
+    }
+    .demo-placeholder .play {
+      width: 78px; height: 78px;
+      background: hsl(0,84%,55%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      box-shadow: 0 0 0 6px rgba(220,38,38,.18), 0 0 0 16px rgba(220,38,38,.08);
+      animation: pulse-play 2s ease-in-out infinite;
+    }
+    @keyframes pulse-play {
+      0%,100% { box-shadow: 0 0 0 6px rgba(220,38,38,.18), 0 0 0 16px rgba(220,38,38,.08); }
+      50% { box-shadow: 0 0 0 10px rgba(220,38,38,.25), 0 0 0 24px rgba(220,38,38,.12); }
+    }
+    .demo-placeholder .play::before {
+      content: '';
+      width: 0; height: 0;
+      border-left: 22px solid #fff;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      margin-left: 6px;
+    }
+    .demo-placeholder p {
+      font-size: .82rem;
+      color: #888;
+      font-weight: 600;
+    }
+    .demo-caption {
+      text-align: center;
+      font-size: .8rem;
+      color: #777;
+      margin-top: 14px;
+      font-style: italic;
+    }
+
+    /* ===== SECTION DEFAULT ===== */
+    .section { padding: 36px 0; }
+    .section-title {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .section-title .red { color: hsl(0,84%,60%); }
+    .section-title .yellow { color: hsl(45,100%,55%); }
+    .section-sub {
+      text-align: center;
+      color: #aaa;
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    /* ===== PAIN CARDS ===== */
+    .pain-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 1fr;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    @media(min-width:700px){
+      .pain-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .pain-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: hsl(0,0%,5%);
+      border: 1px solid hsl(0,0%,15%);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .pain-card .emoji { font-size: 1.3rem; flex-shrink: 0; }
+    .pain-card p {
+      font-size: .87rem;
+      color: #ccc;
+      line-height: 1.5;
+    }
+    .pain-card strong { color: hsl(0,84%,60%); }
+
+    /* ===== SOLUTION REVEAL ===== */
+    .reveal-box {
+      max-width: 720px;
+      margin: 32px auto 0;
+      background: linear-gradient(135deg, rgba(0,161,60,.08), rgba(0,161,60,.02));
+      border-left: 4px solid #00A13C;
+      border-radius: 10px;
+      padding: 20px 22px;
+    }
+    .reveal-box .label {
+      font-size: .7rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: #00A13C;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .reveal-box p {
+      font-size: 1rem;
+      color: #fff;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .reveal-box p .hl {
+      background: linear-gradient(90deg, rgba(255,193,7,.25), rgba(255,193,7,.05));
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: hsl(45,100%,65%);
+      font-weight: 800;
+    }
+
+    /* ===== HOW IT WORKS (3 STEPS) ===== */
+    .steps-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    @media(min-width:760px){
+      .steps-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .step-card {
+      background: hsl(0,0%,6%);
+      border: 1px solid hsl(0,0%,15%);
+      border-radius: 12px;
+      padding: 22px 18px;
+      text-align: center;
+      position: relative;
+    }
+    .step-card .step-num {
+      position: absolute;
+      top: -14px; left: 50%;
+      transform: translateX(-50%);
+      width: 32px; height: 32px;
+      background: hsl(45,100%,55%);
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: .9rem;
+    }
+    .step-card .step-icon {
+      font-size: 2rem;
+      margin: 8px 0 10px;
+    }
+    .step-card h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .step-card p {
+      font-size: .82rem;
+      color: #aaa;
+      line-height: 1.45;
+    }
+
+    /* ===== MODULES (WHAT YOU GET) ===== */
+    .modules-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: grid;
+      gap: 14px;
+    }
+    .module {
+      display: flex;
+      gap: 16px;
+      background: linear-gradient(135deg, hsl(0,0%,6%), hsl(0,0%,3%));
+      border: 1px solid hsl(0,0%,15%);
+      border-radius: 12px;
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .module::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, hsl(45,100%,55%), hsl(0,84%,60%));
+    }
+    .module-num {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: hsl(45,100%,55%);
+      flex-shrink: 0;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -.03em;
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .module h4 {
+      font-size: 1.02rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: #fff;
+    }
+    .module h4 .price {
+      display: inline-block;
+      font-size: .72rem;
+      color: hsl(45,100%,60%);
+      background: rgba(255,193,7,.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+      vertical-align: middle;
+      font-weight: 700;
+    }
+    .module p {
+      font-size: .86rem;
+      color: #bbb;
+      line-height: 1.5;
+    }
+    .module ul {
+      list-style: none;
+      margin-top: 8px;
+    }
+    .module ul li {
+      font-size: .82rem;
+      color: #ccc;
+      padding-left: 18px;
+      position: relative;
+      margin-bottom: 4px;
+    }
+    .module ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #00A13C;
+      font-weight: 900;
+    }
+
+    /* ===== VALUE STACK ===== */
+    .stack-box {
+      max-width: 560px;
+      margin: 32px auto 0;
+      background: hsl(0,0%,5%);
+      border: 1px solid hsl(0,0%,15%);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .stack-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      font-size: .9rem;
+      border-bottom: 1px dashed hsl(0,0%,15%);
+    }
+    .stack-row:last-of-type { border-bottom: none; }
+    .stack-row .name { color: #ccc; }
+    .stack-row .val { color: #888; text-decoration: line-through; font-variant-numeric: tabular-nums; }
+    .stack-total {
+      margin-top: 12px;
+      padding-top: 14px;
+      border-top: 2px solid hsl(0,0%,25%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .stack-total .lbl {
+      font-size: .82rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 700;
+    }
+    .stack-total .val-old {
+      font-size: 1.4rem;
+      color: #666;
+      text-decoration: line-through;
+      font-weight: 800;
+    }
+    .stack-final {
+      text-align: center;
+      margin-top: 20px;
+      padding: 18px;
+      background: linear-gradient(135deg, rgba(0,161,60,.12), rgba(0,161,60,.04));
+      border: 1px solid rgba(0,161,60,.3);
+      border-radius: 10px;
+    }
+    .stack-final .lbl2 {
+      font-size: .72rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: #00A13C;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .stack-final .price {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -.03em;
+      line-height: 1;
+    }
+    .stack-final .price small { font-size: 1rem; color: #aaa; font-weight: 600; }
+    .stack-final .note { font-size: .78rem; color: #aaa; margin-top: 6px; }
+
+    /* ===== CTA ===== */
+    .cta-wrap {
+      max-width: 560px;
+      margin: 32px auto 0;
+      text-align: center;
+    }
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background: linear-gradient(180deg, #00C84B, #00A13C);
+      color: #fff;
+      text-align: center;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 900;
+      letter-spacing: .01em;
+      padding: 20px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0,161,60,.4), inset 0 1px 0 rgba(255,255,255,.2);
+      transition: all .2s;
+      animation: cta-pulse 2.4s ease-in-out infinite;
+      text-transform: uppercase;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(0,161,60,.55), inset 0 1px 0 rgba(255,255,255,.25);
+    }
+    .cta-btn:active { transform: translateY(0); }
+    @keyframes cta-pulse {
+      0%,100% { box-shadow: 0 8px 24px rgba(0,161,60,.4), inset 0 1px 0 rgba(255,255,255,.2); }
+      50% { box-shadow: 0 8px 30px rgba(0,161,60,.65), inset 0 1px 0 rgba(255,255,255,.2); }
+    }
+    .cta-btn .arrow {
+      display: inline-block;
+      margin-left: 6px;
+      transition: transform .2s;
+    }
+    .cta-btn:hover .arrow { transform: translateX(4px); }
+
+    .cta-secure {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      font-size: .72rem;
+      color: #777;
+      flex-wrap: wrap;
+    }
+    .cta-secure span { display: inline-flex; align-items: center; gap: 4px; }
+
+    .no-thanks {
+      display: block;
+      margin: 18px auto 0;
+      color: #666;
+      font-size: .78rem;
+      text-align: center;
+      text-decoration: underline;
+      cursor: pointer;
+      transition: color .2s;
+    }
+    .no-thanks:hover { color: #999; }
+
+    /* ===== GUARANTEE ===== */
+    .guarantee {
+      max-width: 680px;
+      margin: 40px auto 0;
+      background: linear-gradient(135deg, rgba(255,193,7,.06), rgba(255,193,7,.01));
+      border: 1px solid rgba(255,193,7,.25);
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    .guarantee-badge {
+      flex-shrink: 0;
+      width: 72px; height: 72px;
+      background: linear-gradient(135deg, hsl(45,100%,55%), hsl(35,100%,50%));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #000;
+      box-shadow: 0 6px 20px rgba(255,193,7,.3);
+    }
+    .guarantee h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .guarantee p {
+      font-size: .85rem;
+      color: #bbb;
+      line-height: 1.5;
+    }
+    @media(max-width:520px){
+      .guarantee { flex-direction: column; text-align: center; }
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: grid;
+      gap: 8px;
+    }
+    .faq-item {
+      background: hsl(0,0%,5%);
+      border: 1px solid hsl(0,0%,15%);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 16px 18px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: .92rem;
+      color: #fff;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: hsl(45,100%,55%);
+      transition: transform .2s;
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p {
+      padding: 0 18px 16px;
+      font-size: .87rem;
+      color: #bbb;
+      line-height: 1.55;
+    }
+
+    /* ===== FINAL CTA BLOCK ===== */
+    .final-cta {
+      padding: 48px 0 40px;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 900;
+      letter-spacing: -.02em;
+      margin-bottom: 10px;
+    }
+    .final-cta p {
+      color: #aaa;
+      font-size: .95rem;
+      max-width: 540px;
+      margin: 0 auto 24px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 32px 16px 24px;
+      border-top: 1px solid hsl(0,0%,10%);
+      color: #555;
+      font-size: .75rem;
+      line-height: 1.6;
+    }
+    .footer a { color: #777; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ALERT BAR -->
+  <div class="alert-bar">
+    ⚠️ WAIT — Your order is NOT complete yet. This offer expires in <span class="timer" id="timer">09:59</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero-flag">
+        <span class="hero-flag-dot"></span>
+        One-time offer — never repeats
+      </span>
+      <h1>
+        <span class="stop">WAIT!</span>
+        Before going to your members area,<br/>
+        <span class="accent">one last thing</span>
+      </h1>
+      <p class="hero-sub">
+        You already have the <strong>300 prompts</strong>. You already have the <strong>cloned voice</strong>. You already have the <strong>consistent face</strong>.
+        <br/><br/>
+        But there's ONE secret that separates accounts with <strong>10K followers</strong> from those that explode to <strong>1M+ in 60 days</strong>...
+      </p>
+
+      <!-- VSL PLACEHOLDER -->
+      <div class="demo-box">
+        <div class="demo-aspect">
+          <div class="demo-placeholder">
+            <div class="play"></div>
+            <p>▶ Video demo (90s) — Upload your VSL here</p>
+          </div>
+        </div>
+      </div>
+      <p class="demo-caption">↑ Watch this viral Reel being cloned EXACTLY with an AI influencer</p>
+    </div>
+  </section>
+
+  <!-- PAIN SECTION -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">
+        Your influencer is <span class="red">PERFECT</span>...
+        <br/>but she's <span class="red">FROZEN</span>
+      </h2>
+      <p class="section-sub">
+        Generating photos doesn't sell. <strong style="color:#fff">VIDEO sells.</strong> And that's where the real problem starts:
+      </p>
+
+      <div class="pain-grid">
+        <div class="pain-card">
+          <span class="emoji">😩</span>
+          <p><strong>You found a Reel with millions of views</strong> — but copying it means filming yourself, acting, and even then it won't look anything like it.</p>
+        </div>
+        <div class="pain-card">
+          <span class="emoji">🎭</span>
+          <p><strong>You tried Sora and Veo "manually"</strong> — and the movements come out robotic, unnatural, with a 100% AI look.</p>
+        </div>
+        <div class="pain-card">
+          <span class="emoji">💸</span>
+          <p><strong>You paid subscription after subscription</strong> — and you still don't know which tool to use for which type of viral video.</p>
+        </div>
+        <div class="pain-card">
+          <span class="emoji">⏰</span>
+          <p><strong>You spend hours creating 1 video</strong> — while top accounts post 5 a day. It's mathematically impossible to compete that way.</p>
+        </div>
+      </div>
+
+      <div class="reveal-box">
+        <p class="label">💡 The truth nobody tells you</p>
+        <p>
+          Creators who scale to <span class="hl">1M+ followers</span> don't invent viral content.
+          <br/><br/>
+          They <span class="hl">STEAL movements</span> from Reels that already went viral — and apply them to their AI influencer in minutes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION INTRO -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">
+        Introducing <span class="yellow">MOTION CLONE</span>
+      </h2>
+      <p class="section-sub">
+        The system that copies ANY viral video and replicates it EXACTLY with your AI influencer — in 3 minutes.
+      </p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-icon">📥</div>
+          <h4>Find the viral Reel</h4>
+          <p>Any Reel with millions of views. We give you 50 already mapped and ready to clone.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-icon">⚡</div>
+          <h4>Apply Motion Transfer</h4>
+          <p>You upload the original video + a photo of your influencer. The AI does ALL the work in 2 minutes.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-icon">🚀</div>
+          <h4>Publish and go viral</h4>
+          <p>Perfect lip sync, identical gestures, natural expression. The algorithm does NOT detect it's AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What you get <span class="yellow">TODAY</span></h2>
+      <p class="section-sub">4 modules + exclusive bonuses — instant access after payment.</p>
+
+      <div class="modules-list">
+
+        <div class="module">
+          <div class="module-num">01</div>
+          <div>
+            <h4>Motion Transfer Toolkit <span class="price">Value $47</span></h4>
+            <p>Step-by-step tutorial on the 3 tools that dominate the market:</p>
+            <ul>
+              <li><strong>Runway Act-One</strong> — cinematic quality</li>
+              <li><strong>Viggle</strong> — the fastest (videos in 90 sec)</li>
+              <li><strong>Wan 2.5</strong> — open source, unlimited and free</li>
+              <li>Which one to use for each type of video (dance, talking, react, lifestyle)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module">
+          <div class="module-num">02</div>
+          <div>
+            <h4>"Steal This Reel" Library <span class="price">Value $37</span></h4>
+            <p>50 viral Reels already mapped — ready for you to clone with your model:</p>
+            <ul>
+              <li>Link + category + view count for each one</li>
+              <li>Categories: dance, GRWM, react, ASMR, day-in-my-life, motivational</li>
+              <li>Exact timestamp of the most viral moment</li>
+              <li>Why each one worked (hook analysis)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module">
+          <div class="module-num">03</div>
+          <div>
+            <h4>Perfect Lip Sync <span class="price">Value $27</span></h4>
+            <p>Sync the cloned voice (that you already have) with the lips — no lag:</p>
+            <ul>
+              <li>Voice → motion → lip sync workflow in 1 single pass</li>
+              <li>10 "facial expression lock" prompts</li>
+              <li>100% compatible with ElevenLabs (that you already have)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="module">
+          <div class="module-num">04</div>
+          <div>
+            <h4>BONUS: AI Anti-Detection <span class="price">Value $19</span></h4>
+            <p>15 CapCut tweaks that humanize the final video:</p>
+            <ul>
+              <li>Filters and LUTs that disguise the "AI look"</li>
+              <li>Exact settings for grain, jitter and motion blur</li>
+              <li>List of words and elements NOT to use in captions</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VALUE STACK -->
+      <div class="stack-box">
+        <div class="stack-row">
+          <span class="name">Motion Transfer Toolkit</span>
+          <span class="val">$47.00</span>
+        </div>
+        <div class="stack-row">
+          <span class="name">"Steal This Reel" Library</span>
+          <span class="val">$37.00</span>
+        </div>
+        <div class="stack-row">
+          <span class="name">Perfect Lip Sync</span>
+          <span class="val">$27.00</span>
+        </div>
+        <div class="stack-row">
+          <span class="name">BONUS: AI Anti-Detection</span>
+          <span class="val">$19.00</span>
+        </div>
+        <div class="stack-total">
+          <span class="lbl">Total value</span>
+          <span class="val-old">$130.00 USD</span>
+        </div>
+        <div class="stack-final">
+          <p class="lbl2">⚡ Today, only on this page</p>
+          <div class="price">$14.<small>90</small></div>
+          <p class="note">One-time payment. No subscription. Lifetime access.</p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-wrap">
+        <a href="#" class="cta-btn" id="ctaAdd">
+          ✓ YES, ADD MOTION CLONE TO MY ORDER <span class="arrow">→</span>
+        </a>
+        <div class="cta-secure">
+          <span>🔒 Secure payment</span>
+          <span>⚡ Instant access</span>
+          <span>🛡️ 7-day guarantee</span>
+        </div>
+        <a class="no-thanks" id="noThanks">No thanks, I'd rather miss this one-time offer forever</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="section">
+    <div class="container">
+      <div class="guarantee">
+        <div class="guarantee-badge">7d</div>
+        <div>
+          <h4>Unconditional 7-Day Guarantee</h4>
+          <p>
+            Try Motion Clone for a full 7 days. If you can't clone your first viral Reel in less than 5 minutes —
+            or for any reason you don't like it — we'll refund 100%, no questions, no forms, no drama.
+            The risk is 100% on us.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Frequently asked questions</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Do I need to know video editing or use complicated tools?</summary>
+          <p>No. The whole workflow is upload → wait → download. The 3 tools we teach are point-and-click. If you know how to use Instagram, you know how to use this.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Are the tools (Runway, Viggle, Wan) free or do I have to pay?</summary>
+          <p>We teach you all 3 — including <strong>Wan 2.5 which is 100% free and open source</strong>. Runway and Viggle have a free plan with enough credits to get started. We don't lock you behind third-party subscriptions.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does it work with the influencer I already created with the 300 prompts?</summary>
+          <p>Yes. Motion Clone is designed specifically to be applied to your already-trained AI model. You only need 1 clear frontal photo — the rest is done by the system.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does the Instagram/TikTok algorithm detect it's AI?</summary>
+          <p>No, if you follow module 04 (Anti-Detection). The 15 CapCut tweaks we teach eliminate the "AI look" that gives videos away. Accounts that apply this fly under the radar.</p>
+        </details>
+        <details class="faq-item">
+          <summary>When do I get access?</summary>
+          <p>Immediately after payment. You receive an email with your credentials and access to the members area is active in less than 60 seconds.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Why so cheap if the real value is $130?</summary>
+          <p>Because it only appears ONCE on this page, inside your current order. If you leave and come back later, the product costs $47 in the store. We're betting you'll stay for the mentoring upsell down the line — that's why the aggressive price here.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>This page does NOT come back.</h2>
+      <p>
+        If you close it or click "no thanks", Motion Clone is gone. To get it later, you'd have to pay $47 — without the bonuses, without this guarantee, without this offer.
+      </p>
+
+      <div class="cta-wrap">
+        <a href="#" class="cta-btn" id="ctaAdd2">
+          ✓ ADD MOTION CLONE FOR $14.90 <span class="arrow">→</span>
+        </a>
+        <div class="cta-secure">
+          <span>🔒 Secure payment</span>
+          <span>⚡ Instant access</span>
+          <span>🛡️ 7-day guarantee</span>
+        </div>
+        <a class="no-thanks" id="noThanks2">No thanks, I'll lose this one-time offer forever</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© gustagoat.ia — All rights reserved.</p>
+    <p style="margin-top:8px"><a href="#">Terms</a> · <a href="#">Privacy</a> · <a href="#">Contact</a></p>
+  </footer>
+
+  <script>
+    // ===== TIMER =====
+    (function(){
+      const timerEl = document.getElementById('timer');
+      let totalSeconds = 9 * 60 + 59;
+      function tick(){
+        const m = String(Math.floor(totalSeconds / 60)).padStart(2,'0');
+        const s = String(totalSeconds % 60).padStart(2,'0');
+        if (timerEl) timerEl.textContent = m + ':' + s;
+        if (totalSeconds > 0) totalSeconds--;
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // ===== CTAs =====
+    // CONFIG: replace these links with your checkout / success page URLs
+    const URL_ACCEPT  = 'https://pay.hotmart.com/YOUR_CHECKOUT_HERE?bid=motion-clone'; // ← accept upsell
+    const URL_DECLINE = 'https://pay.hotmart.com/members-area'; // ← decline, goes to the members area
+
+    function bindCta(id, url, fbEvent){
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener('click', function(e){
+        e.preventDefault();
+        if (window.fbq) fbq('track', fbEvent, { content_name: 'Upsell Motion Clone', value: 14.90, currency: 'USD' });
+        window.location.href = url;
+      });
+    }
+    bindCta('ctaAdd', URL_ACCEPT, 'AddToCart');
+    bindCta('ctaAdd2', URL_ACCEPT, 'AddToCart');
+    bindCta('noThanks', URL_DECLINE, 'Lead');
+    bindCta('noThanks2', URL_DECLINE, 'Lead');
+  </script>
+
+</body>
+</html>
